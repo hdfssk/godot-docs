@@ -19,7 +19,7 @@ Defines a binding between an :ref:`OpenXRAction<class_OpenXRAction>` and an XR i
 Description
 -----------
 
-This binding resource binds an :ref:`OpenXRAction<class_OpenXRAction>` to inputs or outputs. As most controllers have left hand and right versions that are handled by the same interaction profile we can specify multiple bindings. For instance an action "Fire" could be bound to both "/user/hand/left/input/trigger" and "/user/hand/right/input/trigger".
+This binding resource binds an :ref:`OpenXRAction<class_OpenXRAction>` to an input or output. As most controllers have left hand and right versions that are handled by the same interaction profile we can specify multiple bindings. For instance an action "Fire" could be bound to both "/user/hand/left/input/trigger" and "/user/hand/right/input/trigger". This would require two binding entries.
 
 .. rst-class:: classref-reftable-group
 
@@ -29,11 +29,13 @@ Properties
 .. table::
    :widths: auto
 
-   +---------------------------------------------------+------------------------------------------------------+-------------------------+
-   | :ref:`OpenXRAction<class_OpenXRAction>`           | :ref:`action<class_OpenXRIPBinding_property_action>` |                         |
-   +---------------------------------------------------+------------------------------------------------------+-------------------------+
-   | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`paths<class_OpenXRIPBinding_property_paths>`   | ``PackedStringArray()`` |
-   +---------------------------------------------------+------------------------------------------------------+-------------------------+
+   +---------------------------------------------------+------------------------------------------------------------------+--------+
+   | :ref:`OpenXRAction<class_OpenXRAction>`           | :ref:`action<class_OpenXRIPBinding_property_action>`             |        |
+   +---------------------------------------------------+------------------------------------------------------------------+--------+
+   | :ref:`String<class_String>`                       | :ref:`binding_path<class_OpenXRIPBinding_property_binding_path>` | ``""`` |
+   +---------------------------------------------------+------------------------------------------------------------------+--------+
+   | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`paths<class_OpenXRIPBinding_property_paths>`               |        |
+   +---------------------------------------------------+------------------------------------------------------------------+--------+
 
 .. rst-class:: classref-reftable-group
 
@@ -66,14 +68,33 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`OpenXRAction<class_OpenXRAction>` **action**
+:ref:`OpenXRAction<class_OpenXRAction>` **action** :ref:`🔗<class_OpenXRIPBinding_property_action>`
 
 .. rst-class:: classref-property-setget
 
 - |void| **set_action**\ (\ value\: :ref:`OpenXRAction<class_OpenXRAction>`\ )
 - :ref:`OpenXRAction<class_OpenXRAction>` **get_action**\ (\ )
 
-:ref:`OpenXRAction<class_OpenXRAction>` that is bound to these paths.
+:ref:`OpenXRAction<class_OpenXRAction>` that is bound to :ref:`binding_path<class_OpenXRIPBinding_property_binding_path>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_OpenXRIPBinding_property_binding_path:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **binding_path** = ``""`` :ref:`🔗<class_OpenXRIPBinding_property_binding_path>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_binding_path**\ (\ value\: :ref:`String<class_String>`\ )
+- :ref:`String<class_String>` **get_binding_path**\ (\ )
+
+Binding path that defines the input or output bound to :ref:`action<class_OpenXRIPBinding_property_action>`.
+
+\ **Note:** Binding paths are suggestions, an XR runtime may choose to bind the action to a different input or output emulating this input or output.
 
 .. rst-class:: classref-item-separator
 
@@ -83,12 +104,14 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`PackedStringArray<class_PackedStringArray>` **paths** = ``PackedStringArray()``
+:ref:`PackedStringArray<class_PackedStringArray>` **paths** :ref:`🔗<class_OpenXRIPBinding_property_paths>`
 
 .. rst-class:: classref-property-setget
 
 - |void| **set_paths**\ (\ value\: :ref:`PackedStringArray<class_PackedStringArray>`\ )
 - :ref:`PackedStringArray<class_PackedStringArray>` **get_paths**\ (\ )
+
+**Deprecated:** Use :ref:`binding_path<class_OpenXRIPBinding_property_binding_path>` instead.
 
 Paths that define the inputs or outputs bound on the device.
 
@@ -107,7 +130,9 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-|void| **add_path**\ (\ path\: :ref:`String<class_String>`\ )
+|void| **add_path**\ (\ path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_OpenXRIPBinding_method_add_path>`
+
+**Deprecated:** Binding is for a single path.
 
 Add an input/output path to this binding.
 
@@ -119,7 +144,9 @@ Add an input/output path to this binding.
 
 .. rst-class:: classref-method
 
-:ref:`int<class_int>` **get_path_count**\ (\ ) |const|
+:ref:`int<class_int>` **get_path_count**\ (\ ) |const| :ref:`🔗<class_OpenXRIPBinding_method_get_path_count>`
+
+**Deprecated:** Binding is for a single path.
 
 Get the number of input/output paths in this binding.
 
@@ -131,7 +158,9 @@ Get the number of input/output paths in this binding.
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **has_path**\ (\ path\: :ref:`String<class_String>`\ ) |const|
+:ref:`bool<class_bool>` **has_path**\ (\ path\: :ref:`String<class_String>`\ ) |const| :ref:`🔗<class_OpenXRIPBinding_method_has_path>`
+
+**Deprecated:** Binding is for a single path.
 
 Returns ``true`` if this input/output path is part of this binding.
 
@@ -143,7 +172,9 @@ Returns ``true`` if this input/output path is part of this binding.
 
 .. rst-class:: classref-method
 
-|void| **remove_path**\ (\ path\: :ref:`String<class_String>`\ )
+|void| **remove_path**\ (\ path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_OpenXRIPBinding_method_remove_path>`
+
+**Deprecated:** Binding is for a single path.
 
 Removes this input/output path from this binding.
 
