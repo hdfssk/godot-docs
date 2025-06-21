@@ -30,18 +30,6 @@ Tutorials
 
 .. rst-class:: classref-reftable-group
 
-Properties
-----------
-
-.. table::
-   :widths: auto
-
-   +-------------------------------+---------------------------------------------------------------+-------------------+
-   | :ref:`Vector2<class_Vector2>` | :ref:`graph_offset<class_VisualShader_property_graph_offset>` | ``Vector2(0, 0)`` |
-   +-------------------------------+---------------------------------------------------------------+-------------------+
-
-.. rst-class:: classref-reftable-group
-
 Methods
 -------
 
@@ -103,7 +91,7 @@ Enumerations
 
 .. rst-class:: classref-enumeration
 
-enum **Type**:
+enum **Type**: :ref:`🔗<enum_VisualShader_Type>`
 
 .. _class_VisualShader_constant_TYPE_VERTEX:
 
@@ -201,7 +189,7 @@ Represents the size of the :ref:`Type<enum_VisualShader_Type>` enum.
 
 .. rst-class:: classref-enumeration
 
-enum **VaryingMode**:
+enum **VaryingMode**: :ref:`🔗<enum_VisualShader_VaryingMode>`
 
 .. _class_VisualShader_constant_VARYING_MODE_VERTEX_TO_FRAG_LIGHT:
 
@@ -235,7 +223,7 @@ Represents the size of the :ref:`VaryingMode<enum_VisualShader_VaryingMode>` enu
 
 .. rst-class:: classref-enumeration
 
-enum **VaryingType**:
+enum **VaryingType**: :ref:`🔗<enum_VisualShader_VaryingType>`
 
 .. _class_VisualShader_constant_VARYING_TYPE_FLOAT:
 
@@ -322,7 +310,7 @@ Constants
 
 .. rst-class:: classref-constant
 
-**NODE_ID_INVALID** = ``-1``
+**NODE_ID_INVALID** = ``-1`` :ref:`🔗<class_VisualShader_constant_NODE_ID_INVALID>`
 
 Indicates an invalid **VisualShader** node.
 
@@ -330,31 +318,9 @@ Indicates an invalid **VisualShader** node.
 
 .. rst-class:: classref-constant
 
-**NODE_ID_OUTPUT** = ``0``
+**NODE_ID_OUTPUT** = ``0`` :ref:`🔗<class_VisualShader_constant_NODE_ID_OUTPUT>`
 
 Indicates an output node of **VisualShader**.
-
-.. rst-class:: classref-section-separator
-
-----
-
-.. rst-class:: classref-descriptions-group
-
-Property Descriptions
----------------------
-
-.. _class_VisualShader_property_graph_offset:
-
-.. rst-class:: classref-property
-
-:ref:`Vector2<class_Vector2>` **graph_offset** = ``Vector2(0, 0)``
-
-.. rst-class:: classref-property-setget
-
-- |void| **set_graph_offset**\ (\ value\: :ref:`Vector2<class_Vector2>`\ )
-- :ref:`Vector2<class_Vector2>` **get_graph_offset**\ (\ )
-
-The offset vector of the whole graph.
 
 .. rst-class:: classref-section-separator
 
@@ -369,7 +335,7 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-|void| **add_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, node\: :ref:`VisualShaderNode<class_VisualShaderNode>`, position\: :ref:`Vector2<class_Vector2>`, id\: :ref:`int<class_int>`\ )
+|void| **add_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, node\: :ref:`VisualShaderNode<class_VisualShaderNode>`, position\: :ref:`Vector2<class_Vector2>`, id\: :ref:`int<class_int>`\ ) :ref:`🔗<class_VisualShader_method_add_node>`
 
 Adds the specified ``node`` to the shader.
 
@@ -381,7 +347,7 @@ Adds the specified ``node`` to the shader.
 
 .. rst-class:: classref-method
 
-|void| **add_varying**\ (\ name\: :ref:`String<class_String>`, mode\: :ref:`VaryingMode<enum_VisualShader_VaryingMode>`, type\: :ref:`VaryingType<enum_VisualShader_VaryingType>`\ )
+|void| **add_varying**\ (\ name\: :ref:`String<class_String>`, mode\: :ref:`VaryingMode<enum_VisualShader_VaryingMode>`, type\: :ref:`VaryingType<enum_VisualShader_VaryingType>`\ ) :ref:`🔗<class_VisualShader_method_add_varying>`
 
 Adds a new varying value node to the shader.
 
@@ -393,7 +359,7 @@ Adds a new varying value node to the shader.
 
 .. rst-class:: classref-method
 
-|void| **attach_node_to_frame**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`, frame\: :ref:`int<class_int>`\ )
+|void| **attach_node_to_frame**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`, frame\: :ref:`int<class_int>`\ ) :ref:`🔗<class_VisualShader_method_attach_node_to_frame>`
 
 Attaches the given node to the given frame.
 
@@ -405,7 +371,7 @@ Attaches the given node to the given frame.
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **can_connect_nodes**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ ) |const|
+:ref:`bool<class_bool>` **can_connect_nodes**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_VisualShader_method_can_connect_nodes>`
 
 Returns ``true`` if the specified nodes and ports can be connected together.
 
@@ -417,7 +383,7 @@ Returns ``true`` if the specified nodes and ports can be connected together.
 
 .. rst-class:: classref-method
 
-:ref:`Error<enum_@GlobalScope_Error>` **connect_nodes**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ )
+:ref:`Error<enum_@GlobalScope_Error>` **connect_nodes**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ ) :ref:`🔗<class_VisualShader_method_connect_nodes>`
 
 Connects the specified nodes and ports.
 
@@ -429,7 +395,7 @@ Connects the specified nodes and ports.
 
 .. rst-class:: classref-method
 
-|void| **connect_nodes_forced**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ )
+|void| **connect_nodes_forced**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ ) :ref:`🔗<class_VisualShader_method_connect_nodes_forced>`
 
 Connects the specified nodes and ports, even if they can't be connected. Such connection is invalid and will not function properly.
 
@@ -441,7 +407,7 @@ Connects the specified nodes and ports, even if they can't be connected. Such co
 
 .. rst-class:: classref-method
 
-|void| **detach_node_from_frame**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ )
+|void| **detach_node_from_frame**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ ) :ref:`🔗<class_VisualShader_method_detach_node_from_frame>`
 
 Detaches the given node from the frame it is attached to.
 
@@ -453,7 +419,7 @@ Detaches the given node from the frame it is attached to.
 
 .. rst-class:: classref-method
 
-|void| **disconnect_nodes**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ )
+|void| **disconnect_nodes**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ ) :ref:`🔗<class_VisualShader_method_disconnect_nodes>`
 
 Connects the specified nodes and ports.
 
@@ -465,7 +431,7 @@ Connects the specified nodes and ports.
 
 .. rst-class:: classref-method
 
-:ref:`VisualShaderNode<class_VisualShaderNode>` **get_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ ) |const|
+:ref:`VisualShaderNode<class_VisualShaderNode>` **get_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_VisualShader_method_get_node>`
 
 Returns the shader node instance with specified ``type`` and ``id``.
 
@@ -477,7 +443,7 @@ Returns the shader node instance with specified ``type`` and ``id``.
 
 .. rst-class:: classref-method
 
-:ref:`Array<class_Array>`\[:ref:`Dictionary<class_Dictionary>`\] **get_node_connections**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`\ ) |const|
+:ref:`Array<class_Array>`\[:ref:`Dictionary<class_Dictionary>`\] **get_node_connections**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`\ ) |const| :ref:`🔗<class_VisualShader_method_get_node_connections>`
 
 Returns the list of connected nodes with the specified type.
 
@@ -489,7 +455,7 @@ Returns the list of connected nodes with the specified type.
 
 .. rst-class:: classref-method
 
-:ref:`PackedInt32Array<class_PackedInt32Array>` **get_node_list**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`\ ) |const|
+:ref:`PackedInt32Array<class_PackedInt32Array>` **get_node_list**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`\ ) |const| :ref:`🔗<class_VisualShader_method_get_node_list>`
 
 Returns the list of all nodes in the shader with the specified type.
 
@@ -501,7 +467,7 @@ Returns the list of all nodes in the shader with the specified type.
 
 .. rst-class:: classref-method
 
-:ref:`Vector2<class_Vector2>` **get_node_position**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ ) |const|
+:ref:`Vector2<class_Vector2>` **get_node_position**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_VisualShader_method_get_node_position>`
 
 Returns the position of the specified node within the shader graph.
 
@@ -513,7 +479,7 @@ Returns the position of the specified node within the shader graph.
 
 .. rst-class:: classref-method
 
-:ref:`int<class_int>` **get_valid_node_id**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`\ ) |const|
+:ref:`int<class_int>` **get_valid_node_id**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`\ ) |const| :ref:`🔗<class_VisualShader_method_get_valid_node_id>`
 
 Returns next valid node ID that can be added to the shader graph.
 
@@ -525,7 +491,7 @@ Returns next valid node ID that can be added to the shader graph.
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **has_varying**\ (\ name\: :ref:`String<class_String>`\ ) |const|
+:ref:`bool<class_bool>` **has_varying**\ (\ name\: :ref:`String<class_String>`\ ) |const| :ref:`🔗<class_VisualShader_method_has_varying>`
 
 Returns ``true`` if the shader has a varying with the given ``name``.
 
@@ -537,7 +503,7 @@ Returns ``true`` if the shader has a varying with the given ``name``.
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **is_node_connection**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ ) |const|
+:ref:`bool<class_bool>` **is_node_connection**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, from_node\: :ref:`int<class_int>`, from_port\: :ref:`int<class_int>`, to_node\: :ref:`int<class_int>`, to_port\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_VisualShader_method_is_node_connection>`
 
 Returns ``true`` if the specified node and port connection exist.
 
@@ -549,7 +515,7 @@ Returns ``true`` if the specified node and port connection exist.
 
 .. rst-class:: classref-method
 
-|void| **remove_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ )
+|void| **remove_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`\ ) :ref:`🔗<class_VisualShader_method_remove_node>`
 
 Removes the specified node from the shader.
 
@@ -561,7 +527,7 @@ Removes the specified node from the shader.
 
 .. rst-class:: classref-method
 
-|void| **remove_varying**\ (\ name\: :ref:`String<class_String>`\ )
+|void| **remove_varying**\ (\ name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_VisualShader_method_remove_varying>`
 
 Removes a varying value node with the given ``name``. Prints an error if a node with this name is not found.
 
@@ -573,7 +539,7 @@ Removes a varying value node with the given ``name``. Prints an error if a node 
 
 .. rst-class:: classref-method
 
-|void| **replace_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`, new_class\: :ref:`StringName<class_StringName>`\ )
+|void| **replace_node**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`, new_class\: :ref:`StringName<class_StringName>`\ ) :ref:`🔗<class_VisualShader_method_replace_node>`
 
 Replaces the specified node with a node of new class type.
 
@@ -585,7 +551,7 @@ Replaces the specified node with a node of new class type.
 
 .. rst-class:: classref-method
 
-|void| **set_mode**\ (\ mode\: :ref:`Mode<enum_Shader_Mode>`\ )
+|void| **set_mode**\ (\ mode\: :ref:`Mode<enum_Shader_Mode>`\ ) :ref:`🔗<class_VisualShader_method_set_mode>`
 
 Sets the mode of this shader.
 
@@ -597,11 +563,12 @@ Sets the mode of this shader.
 
 .. rst-class:: classref-method
 
-|void| **set_node_position**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`, position\: :ref:`Vector2<class_Vector2>`\ )
+|void| **set_node_position**\ (\ type\: :ref:`Type<enum_VisualShader_Type>`, id\: :ref:`int<class_int>`, position\: :ref:`Vector2<class_Vector2>`\ ) :ref:`🔗<class_VisualShader_method_set_node_position>`
 
 Sets the position of the specified node.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
