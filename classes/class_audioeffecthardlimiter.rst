@@ -57,7 +57,7 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`float<class_float>` **ceiling_db** = ``-0.3``
+:ref:`float<class_float>` **ceiling_db** = ``-0.3`` :ref:`🔗<class_AudioEffectHardLimiter_property_ceiling_db>`
 
 .. rst-class:: classref-property-setget
 
@@ -76,7 +76,7 @@ The default value of ``-0.3`` prevents potential inter-sample peaks (ISP) from c
 
 .. rst-class:: classref-property
 
-:ref:`float<class_float>` **pre_gain_db** = ``0.0``
+:ref:`float<class_float>` **pre_gain_db** = ``0.0`` :ref:`🔗<class_AudioEffectHardLimiter_property_pre_gain_db>`
 
 .. rst-class:: classref-property-setget
 
@@ -93,7 +93,7 @@ Gain to apply before limiting, in decibels.
 
 .. rst-class:: classref-property
 
-:ref:`float<class_float>` **release** = ``0.1``
+:ref:`float<class_float>` **release** = ``0.1`` :ref:`🔗<class_AudioEffectHardLimiter_property_release>`
 
 .. rst-class:: classref-property-setget
 
@@ -103,6 +103,7 @@ Gain to apply before limiting, in decibels.
 Time it takes in seconds for the gain reduction to fully release.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
