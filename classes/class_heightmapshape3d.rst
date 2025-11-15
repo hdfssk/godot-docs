@@ -19,24 +19,24 @@ A 3D height map shape used for physics collision.
 Description
 -----------
 
-A 3D heightmap shape, intended for use in physics. Usually used to provide a shape for a :ref:`CollisionShape3D<class_CollisionShape3D>`. This is useful for terrain, but it is limited as overhangs (such as caves) cannot be stored. Holes in a **HeightMapShape3D** are created by assigning very low values to points in the desired area.
+A 3D heightmap shape, intended for use in physics. Usually used to provide a shape for a :ref:`CollisionShape3D<class_CollisionShape3D>`. This type is most commonly used for terrain with vertices placed in a fixed width grid. Due to the nature of the heightmap, it cannot be used to model overhangs or caves, which would require multiple vertices at the same vertical location. Holes can be punched through the collision by assigning :ref:`@GDScript.NAN<class_@GDScript_constant_NAN>` to the height of the desired vertices (this is supported in both GodotPhysics3D and Jolt Physics). You could then insert meshes with their own separate collision to provide overhangs, caves, and so on.
 
 \ **Performance:** **HeightMapShape3D** is faster to check collisions against than :ref:`ConcavePolygonShape3D<class_ConcavePolygonShape3D>`, but it is significantly slower than primitive shapes like :ref:`BoxShape3D<class_BoxShape3D>`.
 
-A heightmap collision shape can also be build by using an :ref:`Image<class_Image>` reference:
+A heightmap collision shape can also be built by using an :ref:`Image<class_Image>` reference:
 
 
 .. tabs::
 
  .. code-tab:: gdscript
 
-    var heightmap_texture: Texture = ResourceLoader.load("res://heightmap_image.exr")
-    var heightmap_image: Image = heightmap_texture.get_image()
+    var heightmap_texture = ResourceLoader.load("res://heightmap_image.exr")
+    var heightmap_image = heightmap_texture.get_image()
     heightmap_image.convert(Image.FORMAT_RF)
-    
-    var height_min: float = 0.0
-    var height_max: float = 10.0
-    
+
+    var height_min = 0.0
+    var height_max = 10.0
+
     update_map_data_from_image(heightmap_image, height_min, height_max)
 
 
@@ -86,7 +86,7 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`PackedFloat32Array<class_PackedFloat32Array>` **map_data** = ``PackedFloat32Array(0, 0, 0, 0)``
+:ref:`PackedFloat32Array<class_PackedFloat32Array>` **map_data** = ``PackedFloat32Array(0, 0, 0, 0)`` :ref:`🔗<class_HeightMapShape3D_property_map_data>`
 
 .. rst-class:: classref-property-setget
 
@@ -105,7 +105,7 @@ Height map data. The array's size must be equal to :ref:`map_width<class_HeightM
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **map_depth** = ``2``
+:ref:`int<class_int>` **map_depth** = ``2`` :ref:`🔗<class_HeightMapShape3D_property_map_depth>`
 
 .. rst-class:: classref-property-setget
 
@@ -122,7 +122,7 @@ Number of vertices in the depth of the height map. Changing this will resize the
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **map_width** = ``2``
+:ref:`int<class_int>` **map_width** = ``2`` :ref:`🔗<class_HeightMapShape3D_property_map_width>`
 
 .. rst-class:: classref-property-setget
 
@@ -144,7 +144,7 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`float<class_float>` **get_max_height**\ (\ ) |const|
+:ref:`float<class_float>` **get_max_height**\ (\ ) |const| :ref:`🔗<class_HeightMapShape3D_method_get_max_height>`
 
 Returns the largest height value found in :ref:`map_data<class_HeightMapShape3D_property_map_data>`. Recalculates only when :ref:`map_data<class_HeightMapShape3D_property_map_data>` changes.
 
@@ -156,7 +156,7 @@ Returns the largest height value found in :ref:`map_data<class_HeightMapShape3D_
 
 .. rst-class:: classref-method
 
-:ref:`float<class_float>` **get_min_height**\ (\ ) |const|
+:ref:`float<class_float>` **get_min_height**\ (\ ) |const| :ref:`🔗<class_HeightMapShape3D_method_get_min_height>`
 
 Returns the smallest height value found in :ref:`map_data<class_HeightMapShape3D_property_map_data>`. Recalculates only when :ref:`map_data<class_HeightMapShape3D_property_map_data>` changes.
 
@@ -168,7 +168,7 @@ Returns the smallest height value found in :ref:`map_data<class_HeightMapShape3D
 
 .. rst-class:: classref-method
 
-|void| **update_map_data_from_image**\ (\ image\: :ref:`Image<class_Image>`, height_min\: :ref:`float<class_float>`, height_max\: :ref:`float<class_float>`\ )
+|void| **update_map_data_from_image**\ (\ image\: :ref:`Image<class_Image>`, height_min\: :ref:`float<class_float>`, height_max\: :ref:`float<class_float>`\ ) :ref:`🔗<class_HeightMapShape3D_method_update_map_data_from_image>`
 
 Updates :ref:`map_data<class_HeightMapShape3D_property_map_data>` with data read from an :ref:`Image<class_Image>` reference. Automatically resizes heightmap :ref:`map_width<class_HeightMapShape3D_property_map_width>` and :ref:`map_depth<class_HeightMapShape3D_property_map_depth>` to fit the full image width and height.
 
@@ -176,7 +176,10 @@ The image needs to be in either :ref:`Image.FORMAT_RF<class_Image_constant_FORMA
 
 Each image pixel is read in as a float on the range from ``0.0`` (black pixel) to ``1.0`` (white pixel). This range value gets remapped to ``height_min`` and ``height_max`` to form the final height value.
 
+\ **Note:** Using a heightmap with 16-bit or 32-bit data, stored in EXR or HDR format is recommended. Using 8-bit height data, or a format like PNG that Godot imports as 8-bit, will result in a terraced terrain.
+
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
