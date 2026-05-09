@@ -87,7 +87,7 @@ Enumerations
 
 .. rst-class:: classref-enumeration
 
-enum **AlignmentMode**:
+enum **AlignmentMode**: :ref:`🔗<enum_FlowContainer_AlignmentMode>`
 
 .. _class_FlowContainer_constant_ALIGNMENT_BEGIN:
 
@@ -121,7 +121,7 @@ The child controls will be arranged at the end of the container, i.e. bottom if 
 
 .. rst-class:: classref-enumeration
 
-enum **LastWrapAlignmentMode**:
+enum **LastWrapAlignmentMode**: :ref:`🔗<enum_FlowContainer_LastWrapAlignmentMode>`
 
 .. _class_FlowContainer_constant_LAST_WRAP_ALIGNMENT_INHERIT:
 
@@ -168,7 +168,7 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`AlignmentMode<enum_FlowContainer_AlignmentMode>` **alignment** = ``0``
+:ref:`AlignmentMode<enum_FlowContainer_AlignmentMode>` **alignment** = ``0`` :ref:`🔗<class_FlowContainer_property_alignment>`
 
 .. rst-class:: classref-property-setget
 
@@ -185,7 +185,7 @@ The alignment of the container's children (must be one of :ref:`ALIGNMENT_BEGIN<
 
 .. rst-class:: classref-property
 
-:ref:`LastWrapAlignmentMode<enum_FlowContainer_LastWrapAlignmentMode>` **last_wrap_alignment** = ``0``
+:ref:`LastWrapAlignmentMode<enum_FlowContainer_LastWrapAlignmentMode>` **last_wrap_alignment** = ``0`` :ref:`🔗<class_FlowContainer_property_last_wrap_alignment>`
 
 .. rst-class:: classref-property-setget
 
@@ -202,7 +202,7 @@ The wrap behavior of the last, partially filled row or column (must be one of :r
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **reverse_fill** = ``false``
+:ref:`bool<class_bool>` **reverse_fill** = ``false`` :ref:`🔗<class_FlowContainer_property_reverse_fill>`
 
 .. rst-class:: classref-property-setget
 
@@ -221,7 +221,7 @@ When using a vertical **FlowContainer** with a right to left :ref:`Control.layou
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **vertical** = ``false``
+:ref:`bool<class_bool>` **vertical** = ``false`` :ref:`🔗<class_FlowContainer_property_vertical>`
 
 .. rst-class:: classref-property-setget
 
@@ -245,7 +245,7 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`int<class_int>` **get_line_count**\ (\ ) |const|
+:ref:`int<class_int>` **get_line_count**\ (\ ) |const| :ref:`🔗<class_FlowContainer_method_get_line_count>`
 
 Returns the current line count.
 
@@ -262,7 +262,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **h_separation** = ``4``
+:ref:`int<class_int>` **h_separation** = ``4`` :ref:`🔗<class_FlowContainer_theme_constant_h_separation>`
 
 The horizontal separation of child nodes.
 
@@ -274,11 +274,12 @@ The horizontal separation of child nodes.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **v_separation** = ``4``
+:ref:`int<class_int>` **v_separation** = ``4`` :ref:`🔗<class_FlowContainer_theme_constant_v_separation>`
 
 The vertical separation of child nodes.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
