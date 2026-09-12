@@ -62,7 +62,7 @@ Signals
 
 .. rst-class:: classref-signal
 
-**pressed**\ (\ mouse_button\: :ref:`int<class_int>`, mouse_position\: :ref:`Vector2i<class_Vector2i>`\ )
+**pressed**\ (\ mouse_button\: :ref:`int<class_int>`, mouse_position\: :ref:`Vector2i<class_Vector2i>`\ ) :ref:`🔗<class_StatusIndicator_signal_pressed>`
 
 Emitted when the status indicator is pressed.
 
@@ -79,7 +79,7 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`Texture2D<class_Texture2D>` **icon**
+:ref:`Texture2D<class_Texture2D>` **icon** :ref:`🔗<class_StatusIndicator_property_icon>`
 
 .. rst-class:: classref-property-setget
 
@@ -96,7 +96,7 @@ Status indicator icon.
 
 .. rst-class:: classref-property
 
-:ref:`NodePath<class_NodePath>` **menu** = ``NodePath("")``
+:ref:`NodePath<class_NodePath>` **menu** = ``NodePath("")`` :ref:`🔗<class_StatusIndicator_property_menu>`
 
 .. rst-class:: classref-property-setget
 
@@ -115,7 +115,7 @@ Status indicator native popup menu. If this is set, the :ref:`pressed<class_Stat
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **tooltip** = ``""``
+:ref:`String<class_String>` **tooltip** = ``""`` :ref:`🔗<class_StatusIndicator_property_tooltip>`
 
 .. rst-class:: classref-property-setget
 
@@ -132,7 +132,7 @@ Status indicator tooltip.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **visible** = ``true``
+:ref:`bool<class_bool>` **visible** = ``true`` :ref:`🔗<class_StatusIndicator_property_visible>`
 
 .. rst-class:: classref-property-setget
 
@@ -154,11 +154,12 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`Rect2<class_Rect2>` **get_rect**\ (\ ) |const|
+:ref:`Rect2<class_Rect2>` **get_rect**\ (\ ) |const| :ref:`🔗<class_StatusIndicator_method_get_rect>`
 
 Returns the status indicator rectangle in screen coordinates. If this status indicator is not visible, returns an empty :ref:`Rect2<class_Rect2>`.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
