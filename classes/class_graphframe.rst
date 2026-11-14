@@ -10,8 +10,6 @@
 GraphFrame
 ==========
 
-**Experimental:** This class may be changed or removed in future versions.
-
 **Inherits:** :ref:`GraphElement<class_GraphElement>` **<** :ref:`Container<class_Container>` **<** :ref:`Control<class_Control>` **<** :ref:`CanvasItem<class_CanvasItem>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
 GraphFrame is a special :ref:`GraphElement<class_GraphElement>` that can be used to organize other :ref:`GraphElement<class_GraphElement>`\ s inside a :ref:`GraphEdit<class_GraphEdit>`.
@@ -94,7 +92,7 @@ Signals
 
 .. rst-class:: classref-signal
 
-**autoshrink_changed**\ (\ )
+**autoshrink_changed**\ (\ ) :ref:`🔗<class_GraphFrame_signal_autoshrink_changed>`
 
 Emitted when :ref:`autoshrink_enabled<class_GraphFrame_property_autoshrink_enabled>` or :ref:`autoshrink_margin<class_GraphFrame_property_autoshrink_margin>` changes.
 
@@ -111,7 +109,7 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **autoshrink_enabled** = ``true``
+:ref:`bool<class_bool>` **autoshrink_enabled** = ``true`` :ref:`🔗<class_GraphFrame_property_autoshrink_enabled>`
 
 .. rst-class:: classref-property-setget
 
@@ -128,7 +126,7 @@ If ``true``, the frame's rect will be adjusted automatically to enclose all atta
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **autoshrink_margin** = ``40``
+:ref:`int<class_int>` **autoshrink_margin** = ``40`` :ref:`🔗<class_GraphFrame_property_autoshrink_margin>`
 
 .. rst-class:: classref-property-setget
 
@@ -145,7 +143,7 @@ The margin around the attached nodes that is used to calculate the size of the f
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **drag_margin** = ``16``
+:ref:`int<class_int>` **drag_margin** = ``16`` :ref:`🔗<class_GraphFrame_property_drag_margin>`
 
 .. rst-class:: classref-property-setget
 
@@ -162,7 +160,7 @@ The margin inside the frame that can be used to drag the frame.
 
 .. rst-class:: classref-property
 
-:ref:`Color<class_Color>` **tint_color** = ``Color(0.3, 0.3, 0.3, 0.75)``
+:ref:`Color<class_Color>` **tint_color** = ``Color(0.3, 0.3, 0.3, 0.75)`` :ref:`🔗<class_GraphFrame_property_tint_color>`
 
 .. rst-class:: classref-property-setget
 
@@ -179,7 +177,7 @@ The color of the frame when :ref:`tint_color_enabled<class_GraphFrame_property_t
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **tint_color_enabled** = ``false``
+:ref:`bool<class_bool>` **tint_color_enabled** = ``false`` :ref:`🔗<class_GraphFrame_property_tint_color_enabled>`
 
 .. rst-class:: classref-property-setget
 
@@ -196,7 +194,7 @@ If ``true``, the tint color will be used to tint the frame.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **title** = ``""``
+:ref:`String<class_String>` **title** = ``""`` :ref:`🔗<class_GraphFrame_property_title>`
 
 .. rst-class:: classref-property-setget
 
@@ -218,7 +216,7 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`HBoxContainer<class_HBoxContainer>` **get_titlebar_hbox**\ (\ )
+:ref:`HBoxContainer<class_HBoxContainer>` **get_titlebar_hbox**\ (\ ) :ref:`🔗<class_GraphFrame_method_get_titlebar_hbox>`
 
 Returns the :ref:`HBoxContainer<class_HBoxContainer>` used for the title bar, only containing a :ref:`Label<class_Label>` for displaying the title by default.
 
@@ -237,7 +235,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **resizer_color** = ``Color(0.875, 0.875, 0.875, 1)``
+:ref:`Color<class_Color>` **resizer_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_GraphFrame_theme_color_resizer_color>`
 
 The color modulation applied to the resizer icon.
 
@@ -249,7 +247,7 @@ The color modulation applied to the resizer icon.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`StyleBox<class_StyleBox>` **panel**
+:ref:`StyleBox<class_StyleBox>` **panel** :ref:`🔗<class_GraphFrame_theme_style_panel>`
 
 The default :ref:`StyleBox<class_StyleBox>` used for the background of the **GraphFrame**.
 
@@ -261,7 +259,7 @@ The default :ref:`StyleBox<class_StyleBox>` used for the background of the **Gra
 
 .. rst-class:: classref-themeproperty
 
-:ref:`StyleBox<class_StyleBox>` **panel_selected**
+:ref:`StyleBox<class_StyleBox>` **panel_selected** :ref:`🔗<class_GraphFrame_theme_style_panel_selected>`
 
 The :ref:`StyleBox<class_StyleBox>` used for the background of the **GraphFrame** when it is selected.
 
@@ -273,7 +271,7 @@ The :ref:`StyleBox<class_StyleBox>` used for the background of the **GraphFrame*
 
 .. rst-class:: classref-themeproperty
 
-:ref:`StyleBox<class_StyleBox>` **titlebar**
+:ref:`StyleBox<class_StyleBox>` **titlebar** :ref:`🔗<class_GraphFrame_theme_style_titlebar>`
 
 The :ref:`StyleBox<class_StyleBox>` used for the title bar of the **GraphFrame**.
 
@@ -285,11 +283,12 @@ The :ref:`StyleBox<class_StyleBox>` used for the title bar of the **GraphFrame**
 
 .. rst-class:: classref-themeproperty
 
-:ref:`StyleBox<class_StyleBox>` **titlebar_selected**
+:ref:`StyleBox<class_StyleBox>` **titlebar_selected** :ref:`🔗<class_GraphFrame_theme_style_titlebar_selected>`
 
 The :ref:`StyleBox<class_StyleBox>` used for the title bar of the **GraphFrame** when it is selected.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
