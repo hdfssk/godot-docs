@@ -54,7 +54,7 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **is_simulating_physics**\ (\ ) |const|
+:ref:`bool<class_bool>` **is_simulating_physics**\ (\ ) |const| :ref:`🔗<class_PhysicalBoneSimulator3D_method_is_simulating_physics>`
 
 Returns a boolean that indicates whether the **PhysicalBoneSimulator3D** is running and simulating.
 
@@ -66,7 +66,7 @@ Returns a boolean that indicates whether the **PhysicalBoneSimulator3D** is runn
 
 .. rst-class:: classref-method
 
-|void| **physical_bones_add_collision_exception**\ (\ exception\: :ref:`RID<class_RID>`\ )
+|void| **physical_bones_add_collision_exception**\ (\ exception\: :ref:`RID<class_RID>`\ ) :ref:`🔗<class_PhysicalBoneSimulator3D_method_physical_bones_add_collision_exception>`
 
 Adds a collision exception to the physical bone.
 
@@ -80,7 +80,7 @@ Works just like the :ref:`RigidBody3D<class_RigidBody3D>` node.
 
 .. rst-class:: classref-method
 
-|void| **physical_bones_remove_collision_exception**\ (\ exception\: :ref:`RID<class_RID>`\ )
+|void| **physical_bones_remove_collision_exception**\ (\ exception\: :ref:`RID<class_RID>`\ ) :ref:`🔗<class_PhysicalBoneSimulator3D_method_physical_bones_remove_collision_exception>`
 
 Removes a collision exception to the physical bone.
 
@@ -94,7 +94,7 @@ Works just like the :ref:`RigidBody3D<class_RigidBody3D>` node.
 
 .. rst-class:: classref-method
 
-|void| **physical_bones_start_simulation**\ (\ bones\: :ref:`Array<class_Array>`\[:ref:`StringName<class_StringName>`\] = []\ )
+|void| **physical_bones_start_simulation**\ (\ bones\: :ref:`Array<class_Array>`\[:ref:`StringName<class_StringName>`\] = []\ ) :ref:`🔗<class_PhysicalBoneSimulator3D_method_physical_bones_start_simulation>`
 
 Tells the :ref:`PhysicalBone3D<class_PhysicalBone3D>` nodes in the Skeleton to start simulating and reacting to the physics world.
 
@@ -108,11 +108,12 @@ Optionally, a list of bone names can be passed-in, allowing only the passed-in b
 
 .. rst-class:: classref-method
 
-|void| **physical_bones_stop_simulation**\ (\ )
+|void| **physical_bones_stop_simulation**\ (\ ) :ref:`🔗<class_PhysicalBoneSimulator3D_method_physical_bones_stop_simulation>`
 
 Tells the :ref:`PhysicalBone3D<class_PhysicalBone3D>` nodes in the Skeleton to stop simulating.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
