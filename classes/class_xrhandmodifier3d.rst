@@ -59,7 +59,7 @@ Enumerations
 
 .. rst-class:: classref-enumeration
 
-enum **BoneUpdate**:
+enum **BoneUpdate**: :ref:`🔗<enum_XRHandModifier3D_BoneUpdate>`
 
 .. _class_XRHandModifier3D_constant_BONE_UPDATE_FULL:
 
@@ -98,7 +98,7 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`BoneUpdate<enum_XRHandModifier3D_BoneUpdate>` **bone_update** = ``0``
+:ref:`BoneUpdate<enum_XRHandModifier3D_BoneUpdate>` **bone_update** = ``0`` :ref:`🔗<class_XRHandModifier3D_property_bone_update>`
 
 .. rst-class:: classref-property-setget
 
@@ -115,7 +115,7 @@ Specifies the type of updates to perform on the bones.
 
 .. rst-class:: classref-property
 
-:ref:`StringName<class_StringName>` **hand_tracker** = ``&"/user/hand_tracker/left"``
+:ref:`StringName<class_StringName>` **hand_tracker** = ``&"/user/hand_tracker/left"`` :ref:`🔗<class_XRHandModifier3D_property_hand_tracker>`
 
 .. rst-class:: classref-property-setget
 
@@ -125,6 +125,7 @@ Specifies the type of updates to perform on the bones.
 The name of the :ref:`XRHandTracker<class_XRHandTracker>` registered with :ref:`XRServer<class_XRServer>` to obtain the hand tracking data from.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
